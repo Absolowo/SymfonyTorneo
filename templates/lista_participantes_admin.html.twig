@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}OPTCG - Admin{% endblock %}
+{% block class %}<a class="nav-link" href="/admin">Admin</a>{% endblock %}
+{% block body %}
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Admin Space</h1>
+        </div>
+    </div>
+    <div class="row">
+    {% if participantes %}
+        {% for participante in participantes %}
+            {{include ('partials/alista_participante.html.twig', {'participante': participante})}}
+        {% endfor %}
+    {% else %}
+        <h4>No se han encontrado participantes.</h4>
+    {% endif %}
+            </div>
+    </div>
+</section>
+{% endblock %}

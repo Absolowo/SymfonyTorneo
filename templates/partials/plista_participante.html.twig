@@ -1,0 +1,10 @@
+{% block body %}
+    <div class="col-12 col-md-4 p-5 mt-3">
+        <a href="#"><img src="./assets/img/profile.png" class="rounded-circle img-fluid border"></a>
+        <h2 class="h5 text-center mt-3 mb-3"><strong>{{ participante.nombre }}</strong></h2>
+        <h3 class="h5 text-center mt-3 mb-3">{{ participante.apellidos }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">JID: {{ participante.jid }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">{{ participante.email }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">Tlf: {{ participante.telefono }}</h3>
+    </div>
+{% endblock %}

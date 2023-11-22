@@ -1,0 +1,10 @@
+{% block body %}
+        <a href="#"><img src="./assets/img/profile.png" class="rounded-circle img-fluid border"></a>
+        <h2 class="h5 text-center mt-3 mb-3"><strong>{{ app.user.nombre }}</strong></h2>
+        <h3 class="h5 text-center mt-3 mb-3">{{ app.user.apellidos }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">JID: {{ app.user.jid }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">{{ app.user.email }}</h3>
+        <h3 class="h5 text-center mt-3 mb-3">Tlf: {{ app.user.telefono }}</h3>
+        <p class="text-center"><a href="/edit/{{ app.user.id }}" class="btn btn-primary">Edit</a></p>
+{% endblock %}
+

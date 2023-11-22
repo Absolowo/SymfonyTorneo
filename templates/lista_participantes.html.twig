@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}OPTCG - Participantes{% endblock %}
+{% block body %}
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Participants</h1>
+            <p>
+                These are all the participants who attend our tournaments, join them!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+    {% if participantes %}
+        {% for participante in participantes %}
+            {{include ('partials/plista_participante.html.twig', {'participante': participante})}}
+        {% endfor %}
+    {% else %}
+        <h4>No se han encontrado participantes.</h4>
+    {% endif %}
+            </div>
+    </div>
+</section>
+{% endblock %}

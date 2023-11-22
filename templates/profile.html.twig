@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}OPTCG - Profile{% endblock %}
+{% block body %}
+<section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Profile</h1>
+                <p>
+                    Here you can edit your profile.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                {{include ('partials/datos_participante.html.twig', {'participante': participante})}}
+            </div>
+        </div>
+    </section>
+{% endblock %}

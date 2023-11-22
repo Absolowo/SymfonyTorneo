@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OPTCG - Register{% endblock %}
+
+{% block body %}
+<section class="container py-5">
+    <div class="row text-center pt-3">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1">Edit</h1>
+            <p>
+                You only need to provide us with this information to be part of our community!
+            </p>
+        </div>
+    </div>
+    {{ form_errors(profileForm) }}
+
+    {{ form_start(profileForm) }}
+        {{ form_row(profileForm.nombre) }}
+        {{ form_row(profileForm.apellidos) }}
+        {{ form_row(profileForm.telefono) }}
+        {{ form_row(profileForm.jid) }}
+        {{ form_row(profileForm.email) }}
+    {{ form_end(profileForm) }}
+</section>
+{% endblock %}
